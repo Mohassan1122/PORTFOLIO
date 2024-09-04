@@ -81,6 +81,13 @@ const Projects = () => {
       des="Built an onboarding platform for Syndani Group using Bootstrap, enhancing the user experience with intuitive design and efficient data handling."
       src={projectTwo}
     />
+      <ProjectsCard
+      title="Responsive Portfolio Website"
+       url1="https://portfolio-six-sable-66.vercel.app/"
+      url2="https://portfolio-six-sable-66.vercel.app/"
+      des="Created a professional and fully responsive portfolio website using React and Tailwind CSS. Highlighted your skills, projects, and achievements with modern design principles and animations."
+      src={projectThree}
+    />
     <ProjectsCard
       title="Vidly Multi-Vendor App"
        url1="https://github.com/Mohassan1122/vidly-App"
@@ -118,8 +125,8 @@ const Projects = () => {
     />
     <ProjectsCard
       title="Blog Site with Laravel"
-       url1="https://dial-a-doc-five.vercel.app"
-      url2="https://dial-a-doc-five.vercel.app"
+       url1="https://github.com/Mohassan1122/Blog"
+      url2="https://github.com/Mohassan1122/Blog"
       des="Built a Laravel-based blog platform, demonstrating CRUD operations and showcasing Laravel development best practices and design patterns."
       src={projectTwo}
     />
@@ -144,13 +151,7 @@ const Projects = () => {
       des="Designed and developed a responsive landing page using React, showcasing modern design principles and engaging UI elements."
       src={projectTwo}
     />
-    <ProjectsCard
-      title="Responsive Portfolio Website"
-       url1="https://dial-a-doc-five.vercel.app"
-      url2="https://dial-a-doc-five.vercel.app"
-      des="Created a professional and fully responsive portfolio website using React and Tailwind CSS. Highlighted your skills, projects, and achievements with modern design principles and animations."
-      src={projectThree}
-    />
+  
   </div>
 </section>
 
