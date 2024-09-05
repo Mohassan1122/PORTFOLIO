@@ -53,7 +53,7 @@ const Navbar = () => {
           <div className="fixed inset-0 bg-gray-900 p-4 z-40 flex flex-col overflow-y-auto">
             <div className="flex flex-col gap-8 py-2 relative">
               <div>
-                <img className="w-32" src={PicTwo} alt="logo" />
+                <img className="w-24 rounded-full" src={PicTwo} alt="logo" />
                 <p className="text-sm text-gray-400 mt-2">
                   Over the last 7 years, I've explored the world of web development,
                   moving from basic to advanced levels. My journey has been
