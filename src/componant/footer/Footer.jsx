@@ -1,21 +1,22 @@
 import React from 'react'
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
-import {logo} from "../../assets/index"
+import {PicTwo} from "../../assets/index"
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
     <div className="w-full py-20 h-auto border-b-[1px] border-b-black grid grid-cols-1 md:grid-cols-2 lgl:grid-cols-4 gap-8">
       <div className="w-full h-full flex flex-col gap-8">
-        <img className="w-32" src={logo} alt="logo" />
+        <img src={PicTwo} alt="PicTwo" width="60" height="60" className=' rounded-full mx-12' />
         <div className="flex gap-4">
           <span className="bannerIcon">
-            <FaFacebookF />
+          <Link className="text-primary underline text-blue-500  cursor-pointer" to="https://www.facebook.com/swagsman26"><FaFacebookF /></Link>
           </span>
           <span className="bannerIcon">
-            <FaTwitter />
+          <Link className="text-primary underline text-blue-500  cursor-pointer" to="https://dail-a-doc-five.vercel.app"><FaTwitter /></Link>
           </span>
           <span className="bannerIcon">
-            <FaLinkedinIn />
+          <Link className="text-primary underline text-blue-500  cursor-pointer" to="https://www.linkedin.com/in/mohammed-hassan-49a8281b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><FaLinkedinIn /></Link>
           </span>
         </div>
       </div>

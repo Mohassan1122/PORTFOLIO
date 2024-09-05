@@ -97,11 +97,15 @@ const HomePage = () => {
     //     </section>
 
     //     {/* Certificates Section */}
+
+    
     //     <section className="py-6">
     //       <div className="max-w-3xl mx-auto bg-white shadow-md rounded-lg p-6">
     //         <h3 className="text-2xl font-bold mb-4">Certificates</h3>
     //         <div className="space-y-2">
     //           <p className="text-gray-700">B.Tech Degree In Quantity Surveying</p>
+    //           <p className="text-gray-700">SSCE Certificate</p>
+    //           <p className="text-gray-700">First school leaving Certificate</p>
     //           <p className="text-gray-700">Npower Hardware Certificate</p>
     //           <p className="text-gray-700">Entrepreneurship and Employability Training Certificate</p>
     //           <p className="text-gray-700">MYSQL Basic Certificate from Great Learning Academy</p>
