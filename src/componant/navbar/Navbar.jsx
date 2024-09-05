@@ -1,20 +1,27 @@
-import React, { useState } from 'react'
-import { Link } from "react-scroll";
-import { FiMenu } from "react-icons/fi";
-import { MdClose } from "react-icons/md";
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
-import {PicTwo} from "../../assets/index"
+import React, { useState } from 'react';
+import { Link } from 'react-scroll';
+import { FiMenu } from 'react-icons/fi';
+import { MdClose } from 'react-icons/md';
+import { FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
+import { PicTwo } from '../../assets/index';
 import { navLinksdata } from '../../constants';
 
 const Navbar = () => {
-  const [showMenu, setShowMenu]=useState(false)
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
     <div className="w-full h-24 sticky top-0 z-50 bg-bodyColor mx-auto flex justify-between items-center font-titleFont border-b-[1px] border-b-gray-600">
       <div>
-        <img src={PicTwo} alt="PicTwo" width="60" height="60" className='rounded-full mx-12' />
-        
+        <img
+          src={PicTwo}
+          alt="PicTwo"
+          width="60"
+          height="60"
+          className="rounded-full mx-12"
+        />
       </div>
       <div>
+        {/* Desktop Menu */}
         <ul className="hidden mdl:inline-flex items-center gap-6 lg:gap-10">
           {navLinksdata.map(({ _id, title, link }) => (
             <li
@@ -34,21 +41,24 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+        {/* Mobile Menu Toggle Button */}
         <span
           onClick={() => setShowMenu(!showMenu)}
           className="text-xl mdl:hidden bg-black w-10 h-10 inline-flex items-center justify-center rounded-full text-designColor cursor-pointer"
         >
-          <FiMenu />
+          {showMenu ? <MdClose /> : <FiMenu />}
         </span>
+        {/* Mobile Menu */}
         {showMenu && (
-          <div className="w-[80%] h-screen overflow-scroll absolute top-0 left-0 bg-gray-900 p-4 scrollbar-hide">
+          <div className="fixed inset-0 bg-gray-900 p-4 z-40 flex flex-col overflow-y-auto">
             <div className="flex flex-col gap-8 py-2 relative">
               <div>
-                <img className="w-32" src={logo} alt="logo" />
+                <img className="w-32" src={PicTwo} alt="logo" />
                 <p className="text-sm text-gray-400 mt-2">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Earum soluta perspiciatis molestias enim cum repellat, magnam
-                  exercitationem distinctio aliquid nam.
+                  Over the last 7 years, I've explored the world of web development,
+                  moving from basic to advanced levels. My journey has been
+                  closely connected with Web Develpoment tools. the core elements of
+                  modern web development.
                 </p>
               </div>
               <ul className="flex flex-col gap-4">
@@ -76,15 +86,15 @@ const Navbar = () => {
                   Find me in
                 </h2>
                 <div className="flex gap-4">
-                  <span className="bannerIcon">
+                  <a href="https://www.facebook.com/swagsman26" className="bannerIcon">
                     <FaFacebookF />
-                  </span>
-                  <span className="bannerIcon">
+                  </a>
+                  <a href="https://twitter.com" className="bannerIcon">
                     <FaTwitter />
-                  </span>
-                  <span className="bannerIcon">
+                  </a>
+                  <a href="https://www.linkedin.com/in/mohammed-hassan-49a8281b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="bannerIcon">
                     <FaLinkedinIn />
-                  </span>
+                  </a>
                 </div>
               </div>
               <span
@@ -99,6 +109,6 @@ const Navbar = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Navbar
+export default Navbar;
