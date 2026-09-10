@@ -1,29 +1,58 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaReact } from "react-icons/fa";
+import React from 'react';
+import { FaGithub, FaLinkedinIn, FaReact, FaLaravel } from "react-icons/fa";
+import { SiTypescript, SiTailwindcss } from "react-icons/si";
 
 const Media = () => {
   return (
-    <div className="flex flex-col xl:flex-row gap-6 lgl:gap-0 justify-between">
-        <div>
-          <h2 className="text-base uppercase font-titleFont mb-4">
-            Find me in
-          </h2>
-          <div className="flex gap-4">
-          <span className="bannerIcon">
-          <Link className="text-primary underline text-blue-500  cursor-pointer" to="https://www.facebook.com/swagsman26"><FaFacebookF /></Link>
-          </span>
-          <span className="bannerIcon">
-          <Link className="text-primary underline text-blue-500  cursor-pointer" to="https://twiter.com"><FaTwitter /></Link>
-          </span>
-          <span className="bannerIcon">
-          <Link className="text-primary underline text-blue-500  cursor-pointer" to="https://www.linkedin.com/in/mohammed-hassan-49a8281b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><FaLinkedinIn /></Link>
-          </span>
-          </div>
+    <div className="flex flex-col sm:flex-row gap-8 sm:gap-12 pt-4">
+      <div>
+        <h2 className="text-xs uppercase font-titleFont text-slate-400 font-bold tracking-widest mb-3">
+          CONNECT WITH ME
+        </h2>
+        <div className="flex gap-3">
+          <a
+            href="https://github.com/Mohassan1122"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bannerIcon"
+            title="GitHub Profile"
+          >
+            <FaGithub className="text-slate-700 hover:text-indigo-600" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mohammed-hassan-49a8281b7"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bannerIcon"
+            title="LinkedIn Profile"
+          >
+            <FaLinkedinIn className="text-slate-700 hover:text-indigo-600" />
+          </a>
         </div>
-       
       </div>
-  )
-}
 
-export default Media
+      <div>
+        <h2 className="text-xs uppercase font-titleFont text-slate-400 font-bold tracking-widest mb-3">
+          CORE TECH STACK
+        </h2>
+        <div className="flex gap-3">
+          <span className="bannerIcon text-cyan-600" title="React.js">
+            <FaReact />
+          </span>
+          <span className="bannerIcon text-blue-600" title="TypeScript">
+            <SiTypescript />
+          </span>
+          <span className="bannerIcon text-red-600" title="Laravel">
+            <FaLaravel />
+          </span>
+          <span className="bannerIcon text-sky-500" title="Tailwind CSS">
+            <SiTailwindcss />
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Media;
+

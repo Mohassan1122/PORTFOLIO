@@ -1,4 +1,4 @@
-import React, {  useState } from 'react'
+import React, { useState } from 'react'
 import Title from '../layouts/Title';
 import Education from './Education';
 import Skills from './Skills';
@@ -6,84 +6,64 @@ import Achievement from './Achievement';
 import Experience from "./Experience"
 
 const Resume = () => {
-   const [educationData, setEducationData] = useState(true);
-   const [skillData, setSkillData] = useState(false);
-   const [experienceData, setExperienceData] = useState(false);
-   const [achievementData, setAchievementData] = useState(false);
+  const [activeTab, setActiveTab] = useState("skills");
+
   return (
-    <section id="resume" className="w-full py-20 border-b-[1px] border-b-black">
-      <div className="flex justify-center items-center text-center">
-        <Title title="7+ YEARS OF EXPERIENCE" des="My Resume" />
-      </div>
-      <div>
-        <ul className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
+    <section id="resume" className="w-full py-16 md:py-24 border-b border-slate-200/80">
+      <Title title="ENGINEERING COMPETENCIES & TRACK RECORD" des="My Resume" />
+
+      <div className="mb-10">
+        <ul className="w-full bg-slate-100 p-1.5 rounded-2xl border border-slate-200/80 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2 shadow-inner">
           <li
-            onClick={() =>
-              setEducationData(true) &
-              setSkillData(false) &
-              setExperienceData(false) &
-              setAchievementData(false)
-            }
+            onClick={() => setActiveTab("skills")}
             className={`${
-              educationData
-                ? "border-designColor rounded-lg"
-                : "border-transparent"
-            } resumeLi`}
-          >
-            Education
-          </li>
-          <li
-            onClick={() =>
-              setEducationData(false) &
-              setSkillData(true) &
-              setExperienceData(false) &
-              setAchievementData(false)
-            }
-            className={`${
-              skillData ? "border-designColor rounded-lg" : "border-transparent"
-            } resumeLi`}
+              activeTab === "skills"
+                ? "bg-white text-indigo-600 shadow-md border border-slate-200/80 font-bold"
+                : "text-slate-600 hover:text-indigo-600 hover:bg-white/50 font-medium"
+            } h-12 rounded-xl flex justify-center items-center cursor-pointer transition-all duration-300 text-sm tracking-wide`}
           >
             Professional Skills
           </li>
           <li
-            onClick={() =>
-              setEducationData(false) &
-              setSkillData(false) &
-              setExperienceData(true) &
-              setAchievementData(false)
-            }
+            onClick={() => setActiveTab("experience")}
             className={`${
-              experienceData
-                ? "border-designColor rounded-lg"
-                : "border-transparent"
-            } resumeLi`}
+              activeTab === "experience"
+                ? "bg-white text-indigo-600 shadow-md border border-slate-200/80 font-bold"
+                : "text-slate-600 hover:text-indigo-600 hover:bg-white/50 font-medium"
+            } h-12 rounded-xl flex justify-center items-center cursor-pointer transition-all duration-300 text-sm tracking-wide`}
           >
             Experience
           </li>
           <li
-            onClick={() =>
-              setEducationData(false) &
-              setSkillData(false) &
-              setExperienceData(false) &
-              setAchievementData(true)
-            }
+            onClick={() => setActiveTab("education")}
             className={`${
-              achievementData
-                ? "border-designColor rounded-lg"
-                : "border-transparent"
-            } resumeLi`}
+              activeTab === "education"
+                ? "bg-white text-indigo-600 shadow-md border border-slate-200/80 font-bold"
+                : "text-slate-600 hover:text-indigo-600 hover:bg-white/50 font-medium"
+            } h-12 rounded-xl flex justify-center items-center cursor-pointer transition-all duration-300 text-sm tracking-wide`}
+          >
+            Education & Certs
+          </li>
+          <li
+            onClick={() => setActiveTab("achievements")}
+            className={`${
+              activeTab === "achievements"
+                ? "bg-white text-indigo-600 shadow-md border border-slate-200/80 font-bold"
+                : "text-slate-600 hover:text-indigo-600 hover:bg-white/50 font-medium"
+            } h-12 rounded-xl flex justify-center items-center cursor-pointer transition-all duration-300 text-sm tracking-wide`}
           >
             Achievements
           </li>
         </ul>
       </div>
-      {educationData && <Education />}
-      {skillData && <Skills />}
-      {achievementData && <Achievement />}
-      {experienceData && <Experience />}
- 
+
+      {activeTab === "skills" && <Skills />}
+      {activeTab === "experience" && <Experience />}
+      {activeTab === "education" && <Education />}
+      {activeTab === "achievements" && <Achievement />}
     </section>
   );
 }
 
-export default Resume
+export default Resume;
+

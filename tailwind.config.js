@@ -7,7 +7,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-      screens:{
+      screens: {
         xs: "320px",
         sm: "375px",
         sml: "500px",
@@ -18,20 +18,35 @@ module.exports = {
         xl: "1280px",
       },
       fontFamily: {
-        bodyFont: ["Poppins", "sans-serif"],
-        titleFont: ["Montserrat", "sans-serif"],
+        bodyFont: ["Inter", "sans-serif"],
+        titleFont: ["Montserrat", "Inter", "sans-serif"],
       },
       colors: {
-        bodyColor: "#212428",
-        lightText: "#c4cfde",
-        boxBg: "linear-gradient(145deg, #1e2024, #23272b)",
-        designColor: "#ff014f",
+        bodyColor: "#f8fafc",
+        headingColor: "#0f172a",
+        lightText: "#64748b",
+        designColor: "#4f46e5",
+        accentBlue: "#2563eb",
+        cardBg: "#ffffff",
       },
       boxShadow: {
-        shadowOne: "10px 10px 19px #1c1e22, -10px -10px 19px #262a2e",
+        shadowOne: "0 4px 20px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.04)",
+        cardHover: "0 20px 30px -10px rgba(79, 70, 229, 0.12), 0 10px 15px -5px rgba(15, 23, 42, 0.04)",
+        glow: "0 10px 25px -5px rgba(79, 70, 229, 0.3)",
       },
+      animation: {
+        'float': 'float 6s ease-in-out infinite',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-8px)' },
+        }
+      }
     },
   },
   plugins: [],
 }
+
+
 

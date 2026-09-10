@@ -3,35 +3,27 @@ import { HiArrowRight } from "react-icons/hi";
 
 const Card = ({item:{title,des,icon}}) => {
   return (
-    <div className="w-full px-12 h-80 py-10 rounded-lg shadow-shadowOne flex items-center bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-black hover:to-[#1e2024] transition-colors duration-100 group">
-      <div className="h-72 overflow-y-hidden">
-        <div className="flex h-full flex-col gap-10 translate-y-16 group-hover:translate-y-0 transition-transform duration-500">
-          <div className="w-10 h-8 flex flex-col justify-between">
-        
-            {icon ? (
-              <span className="text-5xl text-designColor">{icon}</span>
-            ) : (
-              <>
-                <span className="w-full h-[2px] rounded-lg bg-designColor inline-flex"></span>
-                <span className="w-full h-[2px] rounded-lg bg-designColor inline-flex"></span>
-                <span className="w-full h-[2px] rounded-lg bg-designColor inline-flex"></span>
-                <span className="w-full h-[2px] rounded-lg bg-designColor inline-flex"></span>
-              </>
-            )}
-          </div>
-          <div className="flex flex-col gap-6">
-            <h2 className="text-xl md:text-2xl font-titleFont font-bold text-gray-300">
-              {title}
-            </h2>
-            <p className="base">{des}</p>
-            <span className="text-2xl text-designColor">
-              <HiArrowRight />
-            </span>
-          </div>
+    <div className="w-full p-8 rounded-2xl bg-white border border-slate-200/80 shadow-shadowOne hover:shadow-cardHover hover:border-indigo-200 hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between">
+      <div>
+        <div className="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-2xl mb-6 shadow-sm border border-indigo-100 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
+          {icon}
         </div>
+
+        <h2 className="text-xl font-bold font-titleFont text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors duration-300">
+          {title}
+        </h2>
+
+        <p className="text-slate-600 text-sm leading-relaxed font-normal">
+          {des}
+        </p>
+      </div>
+
+      <div className="pt-6 flex items-center gap-2 text-indigo-600 font-semibold text-sm group-hover:translate-x-1 transition-transform duration-300">
+        <span>Learn More</span>
+        <HiArrowRight className="text-base" />
       </div>
     </div>
   );
 }
 
-export default Card
+export default Card;

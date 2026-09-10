@@ -1,54 +1,64 @@
 import React from 'react'
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaEnvelope, FaPhone } from "react-icons/fa";
 import { contactImg } from "../../assets/index";
-import { Link } from 'react-router-dom';
 
 const ContactLeft = () => {
   return (
-    <div className="w-full lgl:w-[35%] h-full bg-gradient-to-r from-[#1e2024] to-[#23272b] p-4 lgl:p-8 rounded-lg shadow-shadowOne flex flex-col gap-8 justify-center">
+    <div className="w-full lgl:w-[35%] h-full bg-white p-6 lgl:p-8 rounded-2xl shadow-sm flex flex-col gap-6 justify-center border border-slate-200/80">
       <img
-        className="w-full h-64 object-cover rounded-lg mb-2"
+        className="w-full h-60 object-cover rounded-xl mb-2"
         src={contactImg}
-        alt="contactImg"
+        alt="Mohammed Hassan"
       />
-      <div className="flex flex-col gap-4">
-        <h3 className="text-3xl font-bold text-white">Mohammed Hassan</h3>
-        <p className="text-lg font-normal text-gray-400">
-          Full Stack Developer
+      <div className="flex flex-col gap-3">
+        <h3 className="text-3xl font-bold text-slate-900">Mohammed Hassan</h3>
+        <p className="text-sm font-semibold text-indigo-600 tracking-wide uppercase">
+          Full Stack & Frontend Developer
         </p>
-        <p className="text-base text-gray-400 tracking-wide">
-          I have been working as a Professional Website Designer and
-          Programmer for the past couple of years, continuously honing my
-          skills. I'm passionate about crafting code that not only leaves a
-          lasting impression but also enhances the overall layout. I enjoy
-          the creative process of coding, as it plays a crucial role in
-          delivering exceptional results. My journey is fueled by a love for
-          learning and adapting to the evolving landscape, ensuring that
-          my implementations are always up to Education
+        <p className="text-sm text-slate-600 leading-relaxed tracking-wide">
+          I am a passionate software engineer with extensive experience building modern web applications, scalable APIs, and intuitive user interfaces. I specialize in React, TypeScript, Node.js, and Laravel, with a relentless focus on performance, accessibility, and high quality code.
         </p>
-        <p className="text-base text-gray-400 flex items-center gap-2">
-          Phone: <span className="text-lightText">+234 7036297921</span>
-        </p>
-        <p className="text-base text-gray-400 flex items-center gap-2">
-          Email: <span className="text-lightText">mohammedhassanage26@gmail.com</span>
-        </p>
+        <div className="flex flex-col gap-3 pt-4 border-t border-slate-100">
+          <p className="text-sm text-slate-600 flex items-center gap-3">
+            <FaPhone className="text-indigo-600" />
+            <a href="tel:+2347036297921" className="text-slate-700 hover:text-indigo-600 transition-colors duration-300 font-medium">
+              +234 703 629 7921
+            </a>
+          </p>
+          <p className="text-sm text-slate-600 flex items-center gap-3">
+            <FaEnvelope className="text-indigo-600" />
+            <a href="mailto:mohammedhassanage26@gmail.com" className="text-slate-700 hover:text-indigo-600 transition-colors duration-300 font-medium break-all">
+              mohammedhassanage26@gmail.com
+            </a>
+          </p>
+        </div>
       </div>
-      <div className="flex flex-col gap-4">
-        <h2 className="text-base uppercase font-titleFont mb-4">Find me in</h2>
+      <div className="flex flex-col gap-3 pt-2">
+        <h2 className="text-xs uppercase font-titleFont tracking-widest text-slate-400 font-medium">FIND ME ON</h2>
         <div className="flex gap-4">
-          <span className="bannerIcon">
-          <Link className="text-primary underline text-blue-500  cursor-pointer" to="https://www.facebook.com/swagsman26"><FaFacebookF /></Link>
-          </span>
-          <span className="bannerIcon">
-          <Link className="text-primary underline text-blue-500  cursor-pointer" to="https://dail-a-doc-five.vercel.app"><FaTwitter /></Link>
-          </span>
-          <span className="bannerIcon">
-          <Link className="text-primary underline text-blue-500  cursor-pointer" to="https://www.linkedin.com/in/mohammed-hassan-49a8281b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><FaLinkedinIn /></Link>
-          </span>
+          <a
+            href="https://github.com/Mohassan1122"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bannerIcon"
+            title="GitHub"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mohammed-hassan-49a8281b7"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bannerIcon"
+            title="LinkedIn"
+          >
+            <FaLinkedinIn />
+          </a>
         </div>
       </div>
     </div>
   );
 }
 
-export default ContactLeft
+export default ContactLeft;
+

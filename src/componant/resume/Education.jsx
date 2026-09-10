@@ -9,58 +9,64 @@ const Education = () => {
       animate={{ opacity: 1, transition: { duration: 0.5 } }}
       className="w-full flex flex-col lgl:flex-row gap-10 lgl:gap-20"
     >
-      {/* part one */}
-      <div>
-        <div className="py-6 lgl:py-12 font-titleFont flex flex-col gap-4">
-          <p className="text-sm text-designColor tracking-[4px]">1998 - 2010</p>
-          <h2 className="text-3xl md:text-4xl font-bold">Education Quality</h2>
+      {/* Academic Background */}
+      <div className="w-full lgl:w-1/2">
+        <div className="py-6 lgl:py-8 font-titleFont flex flex-col gap-2">
+          <p className="text-sm text-designColor tracking-[4px] font-medium uppercase">Academic Qualification</p>
+          <h2 className="text-3xl md:text-4xl font-bold">Education</h2>
         </div>
-        <div className="mt-6 lgl:mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
+        <div className="mt-6 w-full border-l-2 border-slate-200 pl-2 flex flex-col gap-8">
           <ResumeCard
-            title="BTech in Quantity Surveying"
-            subTitle="Federal University of Technology Minna Niger State Nigeria (2010 - 2015)"
-            result="Degree"
-            des="The training provided by universities in order to prepare people to work in various sectors of the economy or areas of culture."
+            title="B.Tech in Quantity Surveying"
+            subTitle="Federal University of Technology, Minna (2010 - 2015)"
+            result="B.Tech Degree"
+            des="Focused on construction cost estimation, project management, technical optimization, analytical problem-solving, and contract evaluation."
           />
           <ResumeCard
-            title="Secondary School Education"
-            subTitle="Federal Polytechnic Staff Seconary School Bida Niger State Nigeria (2003 - 2009)"
-            result="SSCE"
-            des="  Secondary education or post-primary education covers two phases on the International Standard Classification of Education scale."
+            title="Senior Secondary School Certificate (SSCE)"
+            subTitle="Federal Polytechnic Staff Secondary School, Bida (2003 - 2009)"
+            result="SSCE Certificate"
+            des="Completed secondary education with distinction in Sciences and Mathematics."
           />
           <ResumeCard
-            title="Primary School Education"
-            subTitle="Avenue International  School (1997 - 2003)"
-            result="First Leaving Cert"
-            des="Primary School Education"
+            title="First School Leaving Certificate"
+            subTitle="Avenue International School (1997 - 2003)"
+            result="Primary Certificate"
+            des="Primary education foundational background."
           />
         </div>
       </div>
-      {/* part Two */}
 
-      <div>
-        <div className="py-6 lgl:py-12 font-titleFont flex flex-col gap-4">
-          <p className="text-sm text-designColor tracking-[4px]">2019 - 2024</p>
-          <h2 className="text-3xl md:text-4xl font-bold">Job Experience</h2>
+      {/* Professional Certifications */}
+      <div className="w-full lgl:w-1/2">
+        <div className="py-6 lgl:py-8 font-titleFont flex flex-col gap-2">
+          <p className="text-sm text-designColor tracking-[4px] font-medium uppercase">Professional Development</p>
+          <h2 className="text-3xl md:text-4xl font-bold">Certifications & Training</h2>
         </div>
-        <div className="mt-6 lgl:mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
+        <div className="mt-6 w-full border-l-2 border-slate-200 pl-2 flex flex-col gap-8">
           <ResumeCard
-            title="Sr. Software Engineer"
-            subTitle="Freelance - (2023 - Present)"
-            result="USA"
-            des="free for fullstack project with Laravel and React"
+            title="Microsoft Certified Innovative Educator"
+            subTitle="Microsoft Education (2021)"
+            result="Certified MIE"
+            des="Certified in leveraging modern technology tools and interactive cloud platforms for technical education and instruction."
           />
           <ResumeCard
-            title="Web Developer & Trainer"
-            subTitle="STEAMLEDGE LIMITED - (2019 - 2023)"
-            result="Nigeria"
-            des="We provide the space and opportunity to build and mentor high quality engineering talents to create innovative products and power your projects."
+            title="PHP & MySQL Backend Engineering Certificate"
+            subTitle="Bincom Academy (2020)"
+            result="Backend Certified"
+            des="Practical training covering PHP OOP principles, relational database design, query optimization, and REST API integration."
           />
           <ResumeCard
-            title="Fullstack Developer"
-            subTitle="STEAMLEDGE LIMITED - (2019 - 2023)"
-            result="Nigeria"
-            des="Steamledge is a bespoke software development company, offering customized, robust solutions to organizations of all sizes."
+            title="MySQL Database Administration Certificate"
+            subTitle="Great Learning Academy (2021)"
+            result="Database Certified"
+            des="Mastery of SQL queries, indexing strategies, data normalization, database security, and transaction management."
+          />
+          <ResumeCard
+            title="N-Power Tech Hardware & Systems Specialist"
+            subTitle="Federal Government N-Power Program (2018)"
+            result="Tech Specialist"
+            des="Specialized technical training in hardware diagnostics, computer systems maintenance, networking fundamentals, and troubleshooting."
           />
         </div>
       </div>
@@ -68,4 +74,4 @@ const Education = () => {
   );
 }
 
-export default Education
+export default Education;

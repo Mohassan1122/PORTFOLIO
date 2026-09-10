@@ -3,160 +3,83 @@ import Title from '../layouts/Title'
 import { projectOne, projectTwo, projectThree } from "../../assets/index";
 import ProjectsCard from './ProjectsCard';
 
+const projectsList = [
+  {
+    title: "SYDAAR — Athena Learning Portal",
+    des: "Enterprise-grade staff learning & evaluation portal featuring interactive course tracks, real-time analytics, automated certificate generation, and Progressive Web App (PWA) capabilities.",
+    src: projectOne,
+    liveUrl: "https://sydaar-web.vercel.app/",
+    githubUrl: "https://github.com/Mohassan1122/SYDAAR_WEB_II",
+    tech: ["React 19", "TypeScript", "TanStack Query", "Firebase Auth", "Tailwind CSS", "PWA"]
+  },
+  {
+    title: "Dial-A-Doc Healthcare Platform",
+    des: "Full-stack telemedicine application connecting patients directly with specialist doctors and healthcare facilities. Features appointment scheduling, medical records, and multi-tier role access.",
+    src: projectTwo,
+    liveUrl: "https://dial-a-doc-five.vercel.app",
+    githubUrl: "https://github.com/Mohassan1122/Dail-A-doc-api_laravel",
+    tech: ["React", "Laravel", "REST API", "MySQL", "Tailwind CSS"]
+  },
+  {
+    title: "Sydani Group Onboarding Platform",
+    des: "Internal onboarding and staff evaluation portal built for Sydani Group to streamline employee orientation, track training milestones, and measure staff engagement.",
+    src: projectThree,
+    liveUrl: "https://syndani-onboarding.vercel.app/",
+    githubUrl: "https://github.com/Mohassan1122",
+    tech: ["JavaScript", "Bootstrap 5", "HTML5/CSS3", "Vercel"]
+  },
+  {
+    title: "Vidly Multi-Vendor Marketplace",
+    des: "Comprehensive e-commerce & multi-vendor shopping platform with administrative dashboard, granular role-based access control (RBAC), inventory tracking, and payment gateway integration.",
+    src: projectThree,
+    liveUrl: "https://github.com/Mohassan1122/vidly-App",
+    githubUrl: "https://github.com/Mohassan1122/vidly-App",
+    tech: ["Laravel", "PHP", "Bootstrap", "MySQL", "Blade"]
+  },
+  {
+    title: "Ringo HR Management System",
+    des: "Human Resource management web application designed for HR professionals to handle worker profiles, leave requests, performance evaluations, and automated payroll calculations.",
+    src: projectOne,
+    liveUrl: "https://github.com/Mohassan1122/Ringo-HR-Sotfware",
+    githubUrl: "https://github.com/Mohassan1122/Ringo-HR-Sotfware",
+    tech: ["PHP", "MySQL", "JavaScript", "HTML/CSS"]
+  },
+  {
+    title: "E-Commerce Web Application",
+    des: "Modern single-page shopping application built with React and Redux Toolkit. Implements dynamic product filtering, cart management, checkout flow, and state persistence.",
+    src: projectTwo,
+    liveUrl: "https://github.com/Mohassan1122/E-CommerceApp",
+    githubUrl: "https://github.com/Mohassan1122/E-CommerceApp",
+    tech: ["React", "Redux Toolkit", "JavaScript", "CSS3"]
+  },
+];
+
 const Projects = () => {
   return (
-    // <section
-    //   id="projects"
-    //   className="w-full py-20 border-b-[1px] border-b-black"
-    // >
-    //   <div className="flex justify-center items-center text-center">
-    //     <Title
-    //       title="VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK"
-    //       des="My Projects"
-    //     />
-    //   </div>
-    //   <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-14">
-    //     <ProjectsCard
-    //       title="SOCIAL MEDIA CLONE"
-    //       des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-    //           Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-    //       src={projectOne}
-    //     />
-    //     <ProjectsCard
-    //       title="E-commerce Website"
-    //       des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-    //           Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-    //       src={projectTwo}
-    //     />
-    //     <ProjectsCard
-    //       title="Chatting App"
-    //       des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-    //           Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-    //       src={projectThree}
-    //     />
-    //     <ProjectsCard
-    //       title="SOCIAL MEDIA CLONE"
-    //       des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-    //           Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-    //       src={projectThree}
-    //     />
-    //     <ProjectsCard
-    //       title="E-commerce Website"
-    //       des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-    //           Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-    //       src={projectOne}
-    //     />
-    //     <ProjectsCard
-    //       title="Chatting App"
-    //       des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-    //           Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-    //       src={projectTwo}
-    //     />
-    //   </div>
-    // </section>
-
-
-<section
-  id="projects"
-  className="w-full py-20 border-b-[1px] border-b-black"
->
-  <div className="flex justify-center items-center text-center">
-    <Title
-      title="VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK"
-      des="My Projects"
-    />
-  </div>
-  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-14">
-    <ProjectsCard
-      title="Dail-A-Doc Fullstack App"
-      url1="https://dial-a-doc-five.vercel.app"
-      url2="https://dial-a-doc-five.vercel.app"
-      des="Developed a healthcare platform using React and Laravel, allowing patients to connect with their preferred doctors, with role-based access for Admins, Doctors, Patients, and Facilities."
-      src={projectOne}
-    />
-    <ProjectsCard
-      title="Syndani Onboarding Platform"
-       url1="https://syndani-onboarding.vercel.app/"
-      url2="https://syndani-onboarding.vercel.app/"
-      des="Built an onboarding platform for Syndani Group using Bootstrap, enhancing the user experience with intuitive design and efficient data handling."
-      src={projectTwo}
-    />
-      <ProjectsCard
-      title="Responsive Portfolio Website"
-       url1="https://portfolio-six-sable-66.vercel.app/"
-      url2="https://portfolio-six-sable-66.vercel.app/"
-      des="Created a professional and fully responsive portfolio website using React and Tailwind CSS. Highlighted your skills, projects, and achievements with modern design principles and animations."
-      src={projectThree}
-    />
-    <ProjectsCard
-      title="Vidly Multi-Vendor App"
-       url1="https://github.com/Mohassan1122/vidly-App"
-      url2="https://github.com/Mohassan1122/vidly-App"
-      des="Created a multi-vendor e-commerce platform with Laravel and Bootstrap, featuring comprehensive admin controls and role-based access management."
-      src={projectThree}
-    />
-    <ProjectsCard
-      title="Dail-A-Doc API"
-       url1="https://github.com/Mohassan1122/Dail-A-doc-api_laravel"
-      url2="https://github.com/Mohassan1122/Dail-A-doc-api_laravel"
-      des="Developed a Laravel API with secure user authentication, profile management, and multi-role access for Admins, Doctors, Patients, and Facilities."
-      src={projectOne}
-    />
-    <ProjectsCard
-      title="E-Commerce App"
-       url1="https://github.com/Mohassan1122/E-CommerceApp"
-      url2="https://github.com/Mohassan1122/E-CommerceApp"
-      des="Built a dynamic e-commerce platform using React and Redux Toolkit, featuring state management, product handling, and cart functionalities."
-      src={projectTwo}
-    />
-    <ProjectsCard
-      title="Artisan Freelance Site"
-       url1="https://github.com/Mohassan1122/artisan-website"
-      url2="https://github.com/Mohassan1122/artisan-website"
-      des="Created a platform in PHP and SQL for artisans to showcase their work, connect with clients, and manage their portfolios."
-      src={projectThree}
-    />
-    <ProjectsCard
-      title="Ringo HR Management System"
-       url1="https://github.com/Mohassan1122/Ringo-HR-Sotfware"
-      url2="https://github.com/Mohassan1122/Ringo-HR-Sotfware"
-      des="Developed an HR management system using PHP and MySQL to streamline employee management and data handling for HR professionals."
-      src={projectOne}
-    />
-    <ProjectsCard
-      title="Blog Site with Laravel"
-       url1="https://github.com/Mohassan1122/Blog"
-      url2="https://github.com/Mohassan1122/Blog"
-      des="Built a Laravel-based blog platform, demonstrating CRUD operations and showcasing Laravel development best practices and design patterns."
-      src={projectTwo}
-    />
-    <ProjectsCard
-      title="E-Shopping Site"
-       url1="https://dial-a-doc-five.vercel.app"
-      url2="https://dial-a-doc-five.vercel.app"
-      des="Developed an online shopping site with Laravel where users can browse, order products, and manage their accounts with a user-friendly interface."
-      src={projectThree}
-    />
-    <ProjectsCard
-      title="Movies App"
-       url1="https://dial-a-doc-five.vercel.app"
-      url2="https://dial-a-doc-five.vercel.app"
-      des="Built a React.js app displaying a list of movies with features to edit, update, and delete movies from the list, enhancing CRUD skills in React."
-      src={projectOne}
-    />
-    <ProjectsCard
-      title="Landing Page Design"
-       url1="https://dial-a-doc-five.vercel.app"
-      url2="https://dial-a-doc-five.vercel.app"
-      des="Designed and developed a responsive landing page using React, showcasing modern design principles and engaging UI elements."
-      src={projectTwo}
-    />
-  
-  </div>
-</section>
-
-
+    <section
+      id="projects"
+      className="w-full py-16 md:py-24 border-b border-slate-200/80"
+    >
+      <Title
+        title="FEATURED WORK & RECENT PROJECTS"
+        des="My Projects"
+      />
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-8">
+        {projectsList.map((project, index) => (
+          <ProjectsCard
+            key={index}
+            title={project.title}
+            des={project.des}
+            src={project.src}
+            liveUrl={project.liveUrl}
+            githubUrl={project.githubUrl}
+            tech={project.tech}
+          />
+        ))}
+      </div>
+    </section>
   );
 }
 
-export default Projects
+export default Projects;
+

@@ -5,12 +5,11 @@ import { HiArrowRight, HiArrowLeft } from "react-icons/hi";
 import Title from '../layouts/Title'
 import { testimonialOne, testimonialTwo, quote } from "../../assets";
 
-
 function SampleNextArrow(props) {
   const { onClick } = props;
   return (
     <div
-      className="w-14 h-12 bg-[#0c1821] hover:bg-black duration-300 rounded-md text-2xl text-gray-400 flex justify-center items-center absolute top-0 right-0 shadow-shadowOne cursor-pointer z-10"
+      className="w-12 h-12 bg-white hover:bg-indigo-600 hover:text-white duration-300 rounded-full text-xl text-slate-600 flex justify-center items-center absolute top-0 right-0 shadow-sm cursor-pointer z-10 border border-slate-200"
       onClick={onClick}
     >
       <HiArrowRight />
@@ -22,7 +21,7 @@ function SamplePrevArrow(props) {
   const { onClick } = props;
   return (
     <div
-      className="w-14 h-12 bg-[#0c1821] hover:bg-black duration-300 rounded-md text-2xl text-gray-400 flex justify-center items-center absolute top-0 right-20 shadow-shadowOne cursor-pointer z-10"
+      className="w-12 h-12 bg-white hover:bg-indigo-600 hover:text-white duration-300 rounded-full text-xl text-slate-600 flex justify-center items-center absolute top-0 right-16 shadow-sm cursor-pointer z-10 border border-slate-200"
       onClick={onClick}
     >
       <HiArrowLeft />
@@ -44,22 +43,9 @@ const Testimonial = () => {
       setDocActive(next);
     },
     appendDots: (dots) => (
-      <div
-        style={{
-          borderRadius: "10px",
-          padding: "10px",
-        }}
-      >
-        <ul
-          style={{
-            display: "flex",
-            gap: "15px",
-            justifyContent: "center",
-            marginTop: "20px",
-          }}
-        >
-          {" "}
-          {dots}{" "}
+      <div style={{ borderRadius: "10px", padding: "10px" }}>
+        <ul style={{ display: "flex", gap: "12px", justifyContent: "center", marginTop: "20px" }}>
+          {dots}
         </ul>
       </div>
     ),
@@ -70,16 +56,14 @@ const Testimonial = () => {
             ? {
               width: "12px",
               height: "12px",
-              color: "blue",
-              background: "#ff014f",
+              background: "#4f46e5",
               borderRadius: "50%",
               cursor: "pointer",
             }
             : {
               width: "12px",
               height: "12px",
-              color: "blue",
-              background: "gray",
+              background: "#cbd5e1",
               borderRadius: "50%",
               cursor: "pointer",
             }
@@ -87,48 +71,49 @@ const Testimonial = () => {
       ></div>
     ),
   };
+
   return (
     <section
       id="testimonial"
-      className="w-full py-20 border-b-[1px] border-b-black"
+      className="w-full py-20 border-b border-slate-200/80"
     >
-      <div className="flex justify-center items-center text-center">
-        <Title title="WHAT CLIENTS SAY" des="Testimonial" />
+      <div className="flex justify-center items-center text-center mb-12">
+        <Title title="WHAT CLIENTS & COLLEAGUES SAY" des="Testimonials" />
       </div>
       <div className="max-w-6xl mx-auto">
-        {/* ================ Slider One ================== */}
         <Slider {...settings}>
+          {/* Slide One */}
           <div className="w-full">
-            <div className="w-full h-auto flex flex-col lgl:flex-row justify-between">
-              <div className="w-full lgl:w-[35%] h-full bg-gradient-to-r from-[#1e2024] to-[#23272b] p-8 rounded-lg shadow-shadowOne flex flex-col md:flex-row lgl:flex-col gap-8 justify-center md:justify-start lgl:justify-center">
+            <div className="w-full h-auto flex flex-col lgl:flex-row justify-between gap-8">
+              <div className="w-full lgl:w-[35%] h-full bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 flex flex-col gap-4 justify-center">
                 <img
-                  className="h-72 md:h-32 lgl:h-72 rounded-lg object-cover"
+                  className="h-64 rounded-xl object-cover"
                   src={testimonialOne}
-                  alt="testimonialOne"
+                  alt="Alex Thompson"
                 />
-                <div className="w-full flex flex-col justify-end">
-                  <p className="text-xs uppercase text-designColor tracking-wide mb-2">
+                <div className="w-full flex flex-col">
+                  <p className="text-xs uppercase text-indigo-600 tracking-wider font-semibold">
                     Bright Solutions Inc.
                   </p>
-                  <h3 className="text-2xl font-bold">Alex Thompson</h3>
-                  <p className="text-base tracking-wide text-gray-500">
+                  <h3 className="text-xl font-bold text-slate-900">Alex Thompson</h3>
+                  <p className="text-xs text-slate-500">
                     Project Manager
                   </p>
                 </div>
               </div>
               <div className="w-full lgl:w-[60%] h-full flex flex-col justify-between">
-                <img className="w-20 lgl:w-32" src={quote} alt="quote" />
-                <div className="w-full h-[70%] py-10 bg-gradient-to-r from-[#1e2024] to-[#23272b] rounded-lg shadow-shadowOne p-4 lgl:p-8 flex flex-col justify-center gap-4 lgl:gap-8">
-                  <div className="flex flex-col justify-between lgl:items-center py-6 border-b-2 border-b-gray-900">
+                <img className="w-16 lgl:w-20 opacity-30 mb-2" src={quote} alt="quote" />
+                <div className="w-full py-8 bg-white rounded-2xl shadow-sm p-6 lgl:p-8 flex flex-col justify-center gap-4 border border-slate-200/80">
+                  <div className="flex flex-col sm:flex-row justify-between sm:items-center pb-4 border-b border-slate-100 gap-2">
                     <div>
-                      <h3 className="text-xl lgl:text-2xl font-medium tracking-wide">
+                      <h3 className="text-xl font-bold text-slate-900">
                         Innovative Web Platform Development
                       </h3>
-                      <p className="text-base text-gray-400 mt-3">
-                        via LinkedIn - Jan 5, 2022 - May 30, 2023
+                      <p className="text-xs text-slate-500 mt-1">
+                        LinkedIn Client Recommendation
                       </p>
                     </div>
-                    <div className="text-yellow-500 flex gap-1">
+                    <div className="text-amber-400 flex gap-1 text-sm">
                       <RiStarFill />
                       <RiStarFill />
                       <RiStarFill />
@@ -136,52 +121,46 @@ const Testimonial = () => {
                       <RiStarFill />
                     </div>
                   </div>
-                  <p className="text-base font-titleFont text-gray-400 font-medium tracking-wide leading-6">
-                    "Working with this developer was a game-changer for our project. His
-                    expertise in frontend and backend development, coupled with his
-                    commitment to delivering on time, was outstanding. The website
-                    exceeded our expectations in terms of design, functionality, and
-                    performance. I highly recommend His services for any digital
-                    project."
+                  <p className="text-sm text-slate-600 leading-relaxed font-normal">
+                    "Working with Mohammed was a game-changer for our platform project. His deep expertise in frontend and backend development, coupled with his commitment to clean architecture and timely delivery, exceeded our expectations. The platform's performance and UX were top-tier."
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          {/* ================ Slider Two ================== */}
 
-          {/* Testimonial Two */}
+          {/* Slide Two */}
           <div className="w-full">
-            <div className="w-full h-auto flex flex-col lgl:flex-row justify-between">
-              <div className="w-full lgl:w-[35%] h-full bg-gradient-to-r from-[#1e2024] to-[#23272b] p-8 rounded-lg shadow-shadowOne flex flex-col md:flex-row lgl:flex-col gap-8 justify-center md:justify-start lgl:justify-center">
+            <div className="w-full h-auto flex flex-col lgl:flex-row justify-between gap-8">
+              <div className="w-full lgl:w-[35%] h-full bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 flex flex-col gap-4 justify-center">
                 <img
-                  className="h-72 md:h-32 lgl:h-72 rounded-lg object-cover"
+                  className="h-64 rounded-xl object-cover"
                   src={testimonialTwo}
-                  alt="testimonialTwo"
+                  alt="Sophia Rodriguez"
                 />
-                <div className="w-full flex flex-col justify-end">
-                  <p className="text-xs uppercase text-designColor tracking-wide mb-2">
+                <div className="w-full flex flex-col">
+                  <p className="text-xs uppercase text-indigo-600 tracking-wider font-semibold">
                     Visionary Tech Hub
                   </p>
-                  <h3 className="text-2xl font-bold">Sophia Rodriguez</h3>
-                  <p className="text-base tracking-wide text-gray-500">
-                    Lead Developer
+                  <h3 className="text-xl font-bold text-slate-900">Sophia Rodriguez</h3>
+                  <p className="text-xs text-slate-500">
+                    Lead Software Architect
                   </p>
                 </div>
               </div>
               <div className="w-full lgl:w-[60%] h-full flex flex-col justify-between">
-                <img className="w-20 lgl:w-32" src={quote} alt="quote" />
-                <div className="w-full h-[70%] py-10 bg-gradient-to-r from-[#1e2024] to-[#23272b] rounded-lg shadow-shadowOne p-4 lgl:p-8 flex flex-col justify-center gap-4 lgl:gap-8">
-                  <div className="flex flex-col justify-between lgl:items-center py-6 border-b-2 border-b-gray-900">
+                <img className="w-16 lgl:w-20 opacity-30 mb-2" src={quote} alt="quote" />
+                <div className="w-full py-8 bg-white rounded-2xl shadow-sm p-6 lgl:p-8 flex flex-col justify-center gap-4 border border-slate-200/80">
+                  <div className="flex flex-col sm:flex-row justify-between sm:items-center pb-4 border-b border-slate-100 gap-2">
                     <div>
-                      <h3 className="text-xl lgl:text-2xl font-medium tracking-wide">
-                        E-commerce Platform Optimization
+                      <h3 className="text-xl font-bold text-slate-900">
+                        E-Commerce & Telemedicine System
                       </h3>
-                      <p className="text-base text-gray-400 mt-3">
-                        via Frelance - Feb 10, 2023 - Dec 15, 2023
+                      <p className="text-xs text-slate-500 mt-1">
+                        Freelance Project Review
                       </p>
                     </div>
-                    <div className="text-yellow-500 flex gap-1">
+                    <div className="text-amber-400 flex gap-1 text-sm">
                       <RiStarFill />
                       <RiStarFill />
                       <RiStarFill />
@@ -189,75 +168,18 @@ const Testimonial = () => {
                       <RiStarFill />
                     </div>
                   </div>
-                  <p className="text-base font-titleFont text-gray-400 font-medium tracking-wide leading-6">
-                    "This Developer has ability to understand our complex requirements and
-                    deliver a seamless solution was impressive. From the user interface
-                    to the backend architecture, everything was handled with great
-                    professionalism and skill. His clear communication and regular
-                    updates kept us confident throughout the project."
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* ================ Slider Three ================== */}
-
-          <div className="w-full">
-            <div className="w-full h-auto flex flex-col lgl:flex-row justify-between">
-              <div className="w-full lgl:w-[35%] h-full bg-gradient-to-r from-[#1e2024] to-[#23272b] p-8 rounded-lg shadow-shadowOne flex flex-col md:flex-row lgl:flex-col gap-8 justify-center md:justify-start lgl:justify-center">
-                <img
-                  className="h-72 md:h-32 lgl:h-72 rounded-lg object-cover"
-                  src={testimonialTwo}
-                  alt="testimonialTwo"
-                />
-                <div className="w-full flex flex-col justify-end">
-                  <p className="text-xs uppercase text-designColor tracking-wide mb-2">
-                    Digital Nexus Ltd.
-                  </p>
-                  <h3 className="text-2xl font-bold">Michael Lee</h3>
-                  <p className="text-base tracking-wide text-gray-500">
-                    Product Designer
-                  </p>
-                </div>
-              </div>
-              <div className="w-full lgl:w-[60%] h-full flex flex-col justify-between">
-                <img className="w-20 lgl:w-32" src={quote} alt="quote" />
-                <div className="w-full h-[70%] py-10 bg-gradient-to-r from-[#1e2024] to-[#23272b] rounded-lg shadow-shadowOne p-4 lgl:p-8 flex flex-col justify-center gap-4 lgl:gap-8">
-                  <div className="flex flex-col justify-between lgl:items-center py-6 border-b-2 border-b-gray-900">
-                    <div>
-                      <h3 className="text-xl lgl:text-2xl font-medium tracking-wide">
-                        Lawfirm App Redesign Project
-                      </h3>
-                      <p className="text-base text-gray-400 mt-3">
-                        via Freelancer - Jun 12, 2022 - Nov 23, 2022
-                      </p>
-                    </div>
-                    <div className="text-yellow-500 flex gap-1">
-                      <RiStarFill />
-                      <RiStarFill />
-                      <RiStarFill />
-                      <RiStarFill />
-                      <RiStarFill />
-                    </div>
-                  </div>
-                  <p className="text-base font-titleFont text-gray-400 font-medium tracking-wide leading-6">
-                    "He completely transformed our app with a sleek new design
-                    that significantly improved the user experience. His creative
-                    insights and attention to detail were evident in every aspect of the
-                    project. It's rare to find a developer that truly listens and brings
-                    your vision to life like they did."
+                  <p className="text-sm text-slate-600 leading-relaxed font-normal">
+                    "Mohammed's ability to understand complex business requirements and engineer seamless technical solutions was highly impressive. From database queries to responsive React interfaces, everything was delivered with solid code quality and professionalism."
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </Slider>
-
-
       </div>
     </section>
   );
 }
 
-export default Testimonial
+export default Testimonial;
+
